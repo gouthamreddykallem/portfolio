@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Welcome to the portfolio of Mr. Goutham Reddy Kallem, which is hosted in AWS at (http://goutham-reddy-kallem.us-west-1.elasticbeanstalk.com/)
+
+
+<!-- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). -->
 
 ## Getting Started
 
-First, run the development server:
+All you need is docker to run this project.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+Rename "Dockerfile_dev" to "Dockerfile" for development build
+
+Run the below commands in order to up the application
+```
+docker build -t username/container_name .
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Don't forget the "." at the end
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Above command will create an image from the Dockerfile.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+You can verify it by running
+```
+docker images
+```
 
-## Learn More
+```
+docker run -p 8888:3000 username/container_name
+```
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+An image of this project is already in my Docker hub, you can directly run the below command to up the site
 
-## Deploy on Vercel
+```
+docker run -p 8888:3000 gouthamreddy1109/portfolio
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This will pull the image and up's the server at (http://localhost:8888/)
