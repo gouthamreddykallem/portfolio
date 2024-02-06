@@ -1,0 +1,15 @@
+name : Docker connection
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Docker build
+    - run: docker build -t gouthamreddy1109/portfolio .
+    - name: Pushing the image
+    - run: docker push gouthamreddy1109/portfolio
