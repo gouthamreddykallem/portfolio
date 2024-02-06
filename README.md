@@ -1,4 +1,4 @@
-Welcome to the portfolio of Mr. Goutham Reddy Kallem, which is hosted in AWS at (http://goutham-reddy-kallem.us-west-1.elasticbeanstalk.com/)
+Welcome to the portfolio of Mr. Goutham Reddy Kallem, which is hosted in AWS(will be disabled sometimes) at (http://goutham-reddy-kallem.us-west-1.elasticbeanstalk.com/)
 
 
 <!-- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). -->
