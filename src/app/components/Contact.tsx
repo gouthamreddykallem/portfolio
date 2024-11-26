@@ -58,7 +58,7 @@ const Contact = () => {
               <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Message Sent!</h3>
               <p className="text-gray-400">
-                Thank you for reaching out. I'll get back to you as soon as possible.
+                Thank you for reaching out. I`&apos;`ll get back to you as soon as possible.
               </p>
               <button
                 onClick={() => setIsSubmitted(false)}
@@ -114,7 +114,7 @@ const Contact = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-xs text-gray-500 mb-2"
                   >
-                    Provide your email if you'd like me to get back to you
+                    Provide your email if you`&apos;`d like me to get back to you
                   </motion.p>
                 )}
                 <input
