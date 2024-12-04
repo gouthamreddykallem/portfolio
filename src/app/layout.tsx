@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Goutham Reddy Kallem - Portfolio',
   description: 'Software Developer Portfolio showcasing skills, projects, and achievements',
   icons: {
-    icon: '/profile_pic.JPG',
+    icon: '/profile_pic.jpg',
   },
 }
 
