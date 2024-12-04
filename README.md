@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features a dark theme, smooth animations, and interactive components to showcase professional experience, projects, and skills.
 
-First, run the development server:
+![Portfolio Preview](/public/portfolio-preview.png)
 
+## ✨ Features
+
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Dark Theme**: Modern dark theme with a professional color scheme
+- **Smooth Animations**: Page transitions and scroll animations using Framer Motion
+- **Interactive Components**: Dynamic navigation and interactive UI elements
+- **Contact Form**: Integrated email contact form using EmailJS
+- **Performance Optimized**: Built with Next.js for optimal performance and SEO
+- **TypeScript**: Type-safe code with TypeScript
+- **Modular Architecture**: Well-organized component structure
+
+## 🛠️ Tech Stack
+
+- [Next.js](https://nextjs.org/) - React framework for production
+- [TypeScript](https://www.typescriptlang.org/) - Static type checking
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
+- [EmailJS](https://www.emailjs.com/) - Email integration
+- [Lucide React](https://lucide.dev/) - Icon library
+- [Headless UI](https://headlessui.dev/) - Unstyled UI components
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn or pnpm
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/gouthamreddykallem/portfolio.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd portfolio
+```
+
+3. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+4. Create a `.env.local` file in the root directory and add your EmailJS credentials:
+```env
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+5. Start the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+portfolio/
+├── src/
+│   ├── app/
+│   │   ├── components/     # React components
+│   │   ├── utils/          # Utility functions
+│   │   ├── globals.css     # Global styles
+│   │   ├── layout.tsx      # Root layout
+│   │   └── page.tsx        # Home page
+│   └── ...
+├── public/                 # Static assets
+├── package.json
+├── tailwind.config.ts     # Tailwind configuration
+└── tsconfig.json          # TypeScript configuration
+```
 
-## Learn More
+## 🔧 Configuration
 
-To learn more about Next.js, take a look at the following resources:
+### Tailwind CSS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The project uses Tailwind CSS for styling. You can customize the theme in `tailwind.config.ts`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```typescript
+module.exports = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx# Personal Portfolio Website
 
-## Deploy on Vercel
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features a dark theme, smooth animations, and interactive components to showcase professional experience, projects, and skills.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Portfolio Preview](/public/portfolio-preview.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ✨ Features
+
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Dark Theme**: Modern dark theme with a professional color scheme
+- **Smooth Animations**: Page transitions and scroll animations using Framer Motion
+- **Interactive Components**: Dynamic navigation and interactive UI elements
+- **Contact Form**: Integrated email contact form using EmailJS
+- **Performance Optimized**: Built with Next.js for optimal performance and SEO
+- **TypeScript**: Type-safe code with TypeScript
+- **Modular Architecture**: Well-organized component structure
+
+## 🛠️ Tech Stack
+
+- [Next.js](https://nextjs.org/) - React framework for production
+- [TypeScript](https://www.typescriptlang.org/) - Static type checking
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
+- [EmailJS](https://www.emailjs.com/) - Email integration
+- [Lucide React](https://lucide.dev/) - Icon library
+- [Headless UI](https://headlessui.dev/) - Unstyled UI components
