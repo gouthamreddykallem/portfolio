@@ -22,7 +22,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-900">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-900">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3b82f6,transparent)]" />
       
