@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowDown, Download, Github, Linkedin, Mail, ArrowUpRight } from 'lucide-react';
+import ProfileImage from '../utils/ProfileImage';
 
 const Hero = () => {
   // Animation variants for staggered animations
@@ -38,13 +39,10 @@ const Hero = () => {
             className="relative mb-8"
           >
             <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-gray-800 shadow-2xl">
-              <Image
+              <ProfileImage
                 src="/profile_pic.jpg"
                 alt="Goutham Reddy Kallem"
-                fill
-                className="object-cover object-center scale-125 rounded-full"
-                priority
-                quality={100}
+                className="w-full h-full rounded-full scale-125"
               />
             </div>
           </motion.div>
