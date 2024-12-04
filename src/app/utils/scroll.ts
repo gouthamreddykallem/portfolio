@@ -28,7 +28,7 @@ export const scrollToSection = (elementId: string) => {
     useEffect(() => {
       const handleScroll = () => {
         const sections = document.querySelectorAll('section[id]')
-        const scrollPosition = window.scrollY + 100 // Offset for better accuracy
+        // const scrollPosition = window.scrollY + 100 // Offset for better accuracy
   
         sections.forEach((section) => {
           const element = section as HTMLElement

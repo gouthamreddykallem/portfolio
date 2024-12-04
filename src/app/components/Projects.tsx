@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Banknote, Car, Image as ImageIcon } from 'lucide-react';
+import { Github, Banknote, Car, Image as ImageIcon } from 'lucide-react';
 
 const projects = [
   {
