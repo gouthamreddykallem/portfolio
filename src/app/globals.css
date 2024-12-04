@@ -19,3 +19,44 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Gradient animation */
+@keyframes gradient-xy {
+  0%, 100% {
+    background-size: 400% 400%;
+    background-position: left top;
+  }
+  25% {
+    background-size: 400% 400%;
+    background-position: right top;
+  }
+  50% {
+    background-size: 400% 400%;
+    background-position: right bottom;
+  }
+  75% {
+    background-size: 400% 400%;
+    background-position: left bottom;
+  }
+}
+
+.animate-gradient-xy {
+  animation: gradient-xy 15s ease infinite;
+}
+
+/* Tilt animation for profile image */
+@keyframes tilt {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+.animate-tilt {
+  animation: tilt 10s ease-in-out infinite;
+}

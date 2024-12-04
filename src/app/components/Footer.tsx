@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Phone, ChevronUp, Globe } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, ChevronUp, Globe, X } from 'lucide-react';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -107,6 +107,14 @@ const Footer = () => {
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://x.com/Goutham80534116"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  <X className="w-5 h-5" />
                 </a>
               </div>
             </div>

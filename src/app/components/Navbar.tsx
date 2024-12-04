@@ -1,35 +1,16 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { scrollToSection, useActiveSection } from '../utils/scroll'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
-  const [activeSection, setActiveSection] = useState('hero')
+  const activeSection = useActiveSection()
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0)
-      
-      // Get all sections
-      const sections = ['hero', 'skills', 'experience', 'projects', 'achievements', 'contact']
-      const sectionElements = sections.map(section => 
-        document.getElementById(section)
-      )
-
-      // Find the current section
-      const scrollPosition = window.scrollY + 100 // Offset for better timing
-
-      sectionElements.forEach((section) => {
-        if (!section) return
-        const sectionTop = section.offsetTop
-        const sectionBottom = sectionTop + section.offsetHeight
-
-        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-          setActiveSection(section.id)
-        }
-      })
     }
-
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -59,15 +40,27 @@ export default function Navbar() {
   )
 }
 
-const NavLink = ({ href, children, isActive }: { href: string; children: React.ReactNode; isActive: boolean }) => (
-  <Link 
-    href={href} 
-    className={`transition-colors duration-300 ${
+const NavLink = ({ 
+  href, 
+  children, 
+  isActive 
+}: { 
+  href: string; 
+  children: React.ReactNode;
+  isActive: boolean;
+}) => (
+  <a 
+    href={href}
+    onClick={(e) => {
+      e.preventDefault()
+      scrollToSection(href)
+    }}
+    className={`${
       isActive 
-        ? 'text-blue-400 font-medium' 
+        ? 'text-white border-b-2 border-white' 
         : 'text-gray-300 hover:text-white'
-    }`}
+    } transition-colors duration-300`}
   >
     {children}
-  </Link>
+  </a>
 )

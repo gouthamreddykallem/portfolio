@@ -6,6 +6,8 @@ const experiences = [
   {
     title: "Software Developer",
     company: "CSM Aviation",
+    companyUrl: "https://csmaviation.com",
+    companyLogo: "/images/csm-logo.png",
     location: "Fresno, California",
     period: "Aug 2023 - Present",
     achievements: [
@@ -18,6 +20,8 @@ const experiences = [
   {
     title: "Research & Teaching Assistant",
     company: "California State University - Fresno",
+    companyUrl: "https://www.fresnostate.edu",
+    companyLogo: "/images/fresnostate-logo.jpg",
     location: "Fresno, California",
     period: "Jun 2023 - May 2024",
     achievements: [
@@ -29,6 +33,8 @@ const experiences = [
   {
     title: "Full Stack Developer",
     company: "Development Bank of Singapore (DBS)",
+    companyUrl: "https://www.dbs.com",
+    companyLogo: "/images/dbs-logo.svg",
     location: "Hyderabad, India",
     period: "Jun 2020 - Aug 2022",
     achievements: [
@@ -41,6 +47,8 @@ const experiences = [
   {
     title: "Engineering Intern",
     company: "OpenText",
+    companyUrl: "https://www.opentext.com",
+    companyLogo: "/images/openText-logo.jpeg",
     location: "Bangalore, India",
     period: "Aug 2019 - Feb 2020",
     achievements: [
@@ -81,8 +89,19 @@ const Experience = () => {
                 <div>
                   <h3 className="text-xl font-bold text-white mb-1">{exp.title}</h3>
                   <div className="flex items-center gap-2 text-blue-400 mb-2">
-                    <Building2 className="w-4 h-4" />
-                    <span className="font-medium">{exp.company}</span>
+                    <img 
+                      src={exp.companyLogo} 
+                      alt={`${exp.company} logo`} 
+                      className="w-8 h-8 object-contain"
+                    />
+                    <a 
+                      href={exp.companyUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="font-medium hover:text-blue-300 transition-colors"
+                    >
+                      {exp.company}
+                    </a>
                   </div>
                   <div className="flex items-center gap-2 text-gray-400 mb-2">
                     <CalendarDays className="w-4 h-4" />

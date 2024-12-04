@@ -8,21 +8,24 @@ const projects = [
     description: "Led development of an end-to-end investment recommendation system with user-friendly UI and automated email notifications. The system provides detailed monthly payment breakdowns to help users optimize their savings.",
     tags: ["React", "Node.js", "MongoDB", "Email Integration"],
     type: "Winner - DBS Hackathon",
-    icon: <Banknote className="w-6 h-6" />
+    icon: <Banknote className="w-6 h-6" />,
+    github: "https://github.com/gouthamreddykallem"
   },
   {
     title: "Ride Comfort Measurement Model",
     description: "Developed an innovative ride comfort measurement system using K-means Clustering on unsupervised data. Project was selected for the Grand Finale of Smart India Hackathon (SIH).",
     tags: ["Python", "Machine Learning", "K-means Clustering", "Data Analysis"],
     type: "Smart India Hackathon Finalist",
-    icon: <Car className="w-6 h-6" />
+    icon: <Car className="w-6 h-6" />,
+    github: "https://github.com/gouthamreddykallem/SIH_Performance-Evaluation-Analysis-of-a-vehicle-in-Typical-Indian-Operating-Conditions"
   },
   {
     title: "Image Descriptor System",
     description: "Created a sophisticated image description system using state-of-the-art deep learning techniques. Combined Computer Vision with CNNs for object recognition and RNNs for Natural Language Processing.",
     tags: ["Deep Learning", "CNN", "RNN", "Computer Vision", "NLP"],
     type: "Research Project",
-    icon: <ImageIcon className="w-6 h-6" />
+    icon: <ImageIcon className="w-6 h-6" />,
+    github: "https://github.com/gouthamreddykallem"
   },
 //   {
 //     title: "Loan Management System",
@@ -70,15 +73,16 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
       </div>
 
       <div className="flex gap-4">
-        <button className="text-sm text-gray-400 hover:text-white flex items-center gap-2 transition-colors">
-          <Github className="w-4 h-4" />
-          View Code
-        </button>
-        <button className="text-sm text-gray-400 hover:text-white flex items-center gap-2 transition-colors">
-          <ExternalLink className="w-4 h-4" />
-          Live Demo
-        </button>
-      </div>
+      <a 
+        href={project.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm text-gray-400 hover:text-white flex items-center gap-2 transition-colors"
+      >
+        <Github className="w-4 h-4" />
+        View Code
+      </a>
+    </div>
     </motion.div>
   );
 };
