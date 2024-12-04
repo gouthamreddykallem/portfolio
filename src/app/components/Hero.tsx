@@ -78,7 +78,7 @@ const Hero = () => {
             variants={itemVariants}
             className="max-w-2xl text-gray-300 mb-8 text-lg leading-relaxed"
           >
-            Full-stack developer with 3+ years of experience crafting robust web solutions 
+            Full-stack developer with 4+ years of experience crafting robust web solutions 
             using React, Node.js, Angular, Spring Boot and cloud technologies. Currently 
             building mission-critical aviation management systems at CSM Aviation, 
             while exploring AI/ML integrations, with keen interest in 

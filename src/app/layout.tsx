@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Goutham Reddy Kallem - Portfolio',
   description: 'Software Developer Portfolio showcasing skills, projects, and achievements',
+  icons: {
+    icon: '/profile_pic.JPG',
+  },
 }
 
 export default function RootLayout({
