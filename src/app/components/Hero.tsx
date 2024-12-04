@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowDown, Download, Github, Linkedin, Mail, ArrowUpRight } from 'lucide-react';
 import ProfileImage from '../utils/ProfileImage';
