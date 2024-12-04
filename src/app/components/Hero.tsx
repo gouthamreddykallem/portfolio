@@ -40,7 +40,7 @@ const Hero = () => {
           >
             <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-gray-800 shadow-2xl">
               <ProfileImage
-                src="/profile_pic.jpg"
+                src="/profile.jpg"
                 alt="Goutham Reddy Kallem"
                 className="w-full h-full rounded-full scale-125"
               />
