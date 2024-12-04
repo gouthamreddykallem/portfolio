@@ -76,7 +76,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a 
-                    href="https://goutham-reddy-k.dev"
+                    href="https://www.gouthamreddykallem.site/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 text-sm"
