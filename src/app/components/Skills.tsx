@@ -3,7 +3,7 @@ import { Code2, Database, Globe, Server, Layout, Github, Terminal, Brain, BookOp
 import { useState } from 'react';
 
 // Custom Tooltip Component
-const Tooltip = ({ children, content, isVisible }: { children?: React.ReactNode, content: string, isVisible: boolean }) => (
+const Tooltip = ({ content, isVisible }: { content: string, isVisible: boolean }) => (
   <AnimatePresence>
     {isVisible && (
       <motion.div
@@ -42,7 +42,7 @@ const SkillBadge = ({ name, years }: { name: string, years: number }) => {
       </motion.span>
       <Tooltip 
         isVisible={showTooltip}
-        content={`${years} ${years === 1 ? 'year' : 'years'} of experience`} children={undefined}      />
+        content={`${years} ${years === 1 ? 'year' : 'years'} of experience`}       />
     </div>
   );
 };
