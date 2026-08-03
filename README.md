@@ -15,6 +15,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 - **TypeScript**: Type-safe code with TypeScript
 - **Modular Architecture**: Well-organized component structure
 
+
 ## 🛠️ Tech Stack
 
 - [Next.js](https://nextjs.org/) - React framework for production
