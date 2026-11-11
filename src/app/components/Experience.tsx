@@ -2,14 +2,36 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CalendarDays, MapPin } from 'lucide-react';
 
-const experiences = [
+type ExperienceEntry = {
+  title: string;
+  company: string;
+  companyUrl?: string;
+  companyLogo?: string;
+  location?: string;
+  period: string;
+  achievements: string[];
+};
+
+const experiences: ExperienceEntry[] = [
+  {
+    // TODO: confirm exact job title, start date, location and company URL
+    title: "Software Engineer",
+    company: "The Nephrology Group, Inc.",
+    period: "20XX - Present",
+    achievements: [
+      "Lead a cross-functional team of five across the US and India",
+      "Build with Java/Spring Boot, Angular, React, Python/FastAPI and AWS",
+      "Work with AI/ML tools including LangChain and RAG pipelines",
+    ]
+  },
   {
     title: "Software Developer",
     company: "CSM Aviation",
     companyUrl: "https://csmaviation.com",
     companyLogo: "/images/csm-logo.png",
     location: "Fresno, California",
-    period: "Aug 2023 - Present",
+    // TODO: set the CSM Aviation end date
+    period: "Aug 2023 - 20XX",
     achievements: [
       "Spearheaded end-to-end development of a comprehensive aviation management system using NextJS, NodeJS, and MongoDB",
       "Implemented responsive interfaces resulting in 40% improvement in user engagement",
@@ -89,28 +111,36 @@ const Experience = () => {
                 <div>
                   <h3 className="text-xl font-bold text-white mb-1">{exp.title}</h3>
                   <div className="flex items-center gap-2 text-blue-400 mb-2">
-                    <img 
-                      src={exp.companyLogo} 
-                      alt={`${exp.company} logo`} 
-                      className="w-8 h-8 object-contain"
-                    />
-                    <a 
-                      href={exp.companyUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="font-medium hover:text-blue-300 transition-colors"
-                    >
-                      {exp.company}
-                    </a>
+                    {exp.companyLogo && (
+                      <img 
+                        src={exp.companyLogo} 
+                        alt={`${exp.company} logo`} 
+                        className="w-8 h-8 object-contain"
+                      />
+                    )}
+                    {exp.companyUrl ? (
+                      <a 
+                        href={exp.companyUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="font-medium hover:text-blue-300 transition-colors"
+                      >
+                        {exp.company}
+                      </a>
+                    ) : (
+                      <span className="font-medium">{exp.company}</span>
+                    )}
                   </div>
                   <div className="flex items-center gap-2 text-gray-400 mb-2">
                     <CalendarDays className="w-4 h-4" />
                     <span>{exp.period}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-400">
-                    <MapPin className="w-4 h-4" />
-                    <span>{exp.location}</span>
-                  </div>
+                  {exp.location && (
+                    <div className="flex items-center gap-2 text-gray-400">
+                      <MapPin className="w-4 h-4" />
+                      <span>{exp.location}</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Achievements */}

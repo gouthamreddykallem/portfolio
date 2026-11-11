@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Code2, Database, Globe, Server, Layout, Github, Terminal, Brain, BookOpen } from 'lucide-react';
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 
 // Custom Tooltip Component
 const Tooltip = ({ content, isVisible }: { content: string, isVisible: boolean }) => (
@@ -24,7 +24,7 @@ const Tooltip = ({ content, isVisible }: { content: string, isVisible: boolean }
 );
 
 // Skill Badge Component
-const SkillBadge = ({ name, years }: { name: string, years: number }) => {
+const SkillBadge = ({ name, years }: { name: string, years?: number }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
@@ -41,14 +41,14 @@ const SkillBadge = ({ name, years }: { name: string, years: number }) => {
         {name}
       </motion.span>
       <Tooltip 
-        isVisible={showTooltip}
+        isVisible={showTooltip && years !== undefined}
         content={`${years} ${years === 1 ? 'year' : 'years'} of experience`}       />
     </div>
   );
 };
 
 
-const skillsData = {
+const skillsData: Record<string, { icon: ReactNode, skills: { name: string, years?: number }[] }> = {
   "Programming Languages": {
     icon: <Code2 className="w-6 h-6" />,
     skills: [
@@ -79,7 +79,9 @@ const skillsData = {
       { name: "Spring Boot", years: 3 },
       { name: "Django", years: 3 },
       { name: "Express", years: 3 },
-      { name: "Flask", years: 3 }
+      { name: "Flask", years: 3 },
+      // TODO: add years of experience
+      { name: "FastAPI" }
     ]
   },
   "Database Technologies": {
@@ -129,6 +131,9 @@ const skillsData = {
     skills: [
       { name: "LLMs", years: 1 },
       { name: "AI Agents", years: 1 },
+      // TODO: add years of experience
+      { name: "LangChain" },
+      { name: "RAG Pipelines" },
       { name: "Machine Learning", years: 2 },
       { name: "Deep Learning", years: 2 },
       { name: "Neural Networks", years: 2 }

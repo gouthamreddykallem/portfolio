@@ -76,11 +76,11 @@ const Hero = () => {
             variants={itemVariants}
             className="max-w-2xl text-gray-300 mb-8 text-lg leading-relaxed"
           >
-            Full-stack developer with 4+ years of experience crafting robust web solutions 
-            using React, Node.js, Angular, Spring Boot and cloud technologies. Currently 
-            building mission-critical aviation management systems at CSM Aviation, 
-            while exploring AI/ML integrations, with keen interest in 
-            LLMs and AI agents.
+            Full-stack developer with 5+ years of experience crafting robust web solutions 
+            using Java/Spring Boot, Angular, React, Python/FastAPI and AWS. Currently at 
+            The Nephrology Group, Inc., leading a cross-functional team of five across 
+            the US and India, and building with AI/ML tools including LangChain and 
+            RAG pipelines.
           </motion.p>
 
           {/* Currently Working On */}
